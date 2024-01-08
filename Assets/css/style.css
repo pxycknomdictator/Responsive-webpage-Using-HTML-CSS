@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    outline: none;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #7100d4;
+    --secondary-color: #f9f6f6;
+    --text-color: #82817f;
+    --big-box: #6d01cd;
+    --line-color: #dadada;
+}
+
+/* most usable properties */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.margin-inline {
+    max-width: 85%;
+    margin-inline: auto;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* styling web-page now */
+
+header {
+    width: 100%;
+    background: var(--secondary-color);
+}
+
+.logo-wrapper>.logo {
+    font-size: 3rem;
+}
+
+.header-container {
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.navigation {
+    gap: 4rem;
+    font-size: 1.59rem;
+    font-weight: 500;
+
+    a {
+        transition: all .3s linear;
+    }
+}
+
+.nav-links {
+    position: relative;
+}
+
+.nav-links::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 6pc;
+    transition: all .3s linear;
+    opacity: 0;
+}
+
+.nav-links:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+.navigation>.nav-links>a:hover {
+    color: var(--primary-color);
+}
+
+.action-btn {
+    padding: 1.5rem 1.9rem;
+    border: none;
+    font-weight: 600;
+    border-radius: .4rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: none;
+}
+
+.secondary-btn {
+    background: var(--primary-color);
+    color: white;
+    transition: all linear .3s;
+}
+
+.secondary-btn:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+.hamburger{
+    display: none;
+}
+
+/* header-section successfully completed 💙 */
+
+
+
+/* hero-section starting  */
+
+.hero-container {
+    width: 100%;
+    min-height: calc(100% - 80px);
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+}
+
+.hero-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-left-introduction {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ratings {
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-rating-text {
+    font-size: 1.5rem;
+    margin-left: .8rem;
+}
+
+.hero-heading {
+    margin-top: 2rem;
+    font-size: 4.8rem;
+    color: black;
+    line-height: 5.6rem;
+}
+
+.hero-paragraph {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-block: 1rem;
+    line-height: 2rem;
+}
+
+.hero-btn {
+    align-items: center;
+    gap: 3rem;
+}
+
+.examples {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+}
+
+.examples:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.4px;
+    background: var(--primary-color);
+    left: 0%;
+    bottom: -2px;
+    border-radius: 2pc;
+}
+
+.checks {
+    margin-top: 2rem;
+    align-items: center;
+    gap: .9rem;
+}
+
+.checks>img:nth-child(3) {
+    margin-left: 2.5rem;
+}
+
+.checks>span {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.hero-right-image > img{
+    width: 100%;
+}
+
+/* hero-section successfully completed 💙 */
+
+
+/* our information start */
+
+.our-information {
+    width: 100%;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.about-heading {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.product-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.about-h1 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    margin-bottom: 3.8rem;
+}
+
+.product-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-block: 1.4rem;
+}
+
+.product-paragraph {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 2rem;
+}
+
+.big-purple-box {
+    grid-template-columns: repeat(2, 1fr);
+    background: var(--big-box);
+    border-radius: .7rem;
+}
+
+.big-purple-h1 {
+    color: white;
+    font-size: 3.4rem;
+}
+
+.big-purple-paragraph {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-block: 1.3rem;
+    line-height: 2rem;
+}
+
+.left-part {
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 4rem;
+}
+
+.big-purple-btn {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.right-part {
+    padding-top: 4rem;
+    justify-content: center;
+}
+
+.right-part>img {
+    width: 80%;
+    border-radius: .6rem;
+}
+
+/* about-section successfully completed 💙 */
+
+
+
+/* portfolio-section start */
+
+.portfolio-information {
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.portfolio-card-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.portfolio-cards {
+    border: .6px solid var(--line-color);
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    border-radius: .6rem;
+}
+
+.profile-info>p:first-child {
+    margin-bottom: .45rem;
+}
+
+.profile {
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-name {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.revenue {
+    font-size: 1rem;
+}
+
+.portfolio-discription {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-block: 1.9rem;
+    line-height: 1.9rem;
+}
+
+.portfolio-btn {
+    width: 100%;
+    padding: 1.4rem;
+    background: transparent;
+    border: .6px solid var(--line-color);
+    color: var(--big-box);
+    font-weight: 600;
+    transition: all linear .4s;
+    cursor: pointer;
+}
+
+.portfolio-btn:hover {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+}
+
+/* portfolio-section successfully completed 💙 */
+
+
+/* Finall section I mean footer start 😆 😆 😆 */
+
+footer{
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 5rem 0rem 3rem 0rem;
+    border-top: 1px solid var(--line-color);
+}
+.footer-container{
+    grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-heading{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.footer-paragraph{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 1rem 0rem 2.5rem 0rem;
+    text-wrap: balance;
+    line-height: 1.7rem;
+}
+
+.footer-links{
+    margin-block: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.footer-links > a{
+    color: var(--text-color);
+}

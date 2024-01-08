@@ -1,0 +1,172 @@
+/* responsive design code */
+
+/* Laptop layout media queries */
+
+@media (max-width: 1150px) {
+
+    html {
+        font-size: 58%;
+    }
+
+    .hero-container h1 {
+        margin-top: 0;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .hero-container p {
+        font-size: 1.5rem;
+        margin-block: 2rem;
+    }
+
+    .hero-right-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-right-image>img {
+        width: 85%;
+    }
+
+    .big-purple-paragraph {
+        font-size: 1.5rem;
+        margin-block: 2rem;
+    }
+
+    .big-purple-btn,
+    .action-btn {
+        padding: 1.5rem 2rem;
+    }
+
+    .portfolio-cards {
+        text-align: justify;
+    }
+
+    .portfolio-btn {
+        font-size: 1.4rem;
+        padding: 1.5rem 0;
+    }
+    .portfolio-discription {
+        font-size: 1.4rem;
+    }
+
+    .portfolio-card-container{
+        gap: 3rem;
+    }
+
+}
+
+
+
+@media (max-width: 992px) {
+
+    html {
+        font-size: 54.5%;
+    }
+
+    .hero-container p{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+@media (max-width: 840px) {
+
+    html {
+        font-size: 46.5%;
+    }
+
+}
+
+@media (max-width: 737px) {
+    html{
+        font-size: 45.5%;
+    }
+    .toggle-btn, nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hero-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 4rem;
+    }
+    .hero-left-introduction {
+        text-align: center;
+        align-items: center;
+    }
+    .hero-container h1{
+        font-size: 3.5rem;
+    }
+.hero-right-image{
+    justify-content: center;
+    align-items: center;
+}
+.hero-right-image img{
+    width: 60%;
+}
+p{
+    font-size: 1.5rem;
+}
+
+}
+
+@media (max-width: 660px) {
+    html{
+        font-size: 42.5%;
+    }
+
+    .portfolio-card-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+    .product-container{
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 568px) {
+    html{
+        font-size: 60.5%;
+    }
+
+    .hero-btn{
+        flex-direction: column;
+        gap: 1.7rem;
+    }
+    .secondary-btn{
+        padding: 2rem 6rem;
+    font-size: 2rem;
+    }
+    .hero-btn > .examples {
+        font-size: 2rem;
+    }
+    .big-purple-box{
+        padding-top: 2rem;
+    }
+    .big-purple-h1{
+        font-size: 2.4rem;
+    }
+    .portfolio-btn{
+        padding: 2rem 0rem;
+        font-size: 1.6rem;
+    }
+
+    .big-purple-box{
+        grid-template-columns: 1fr;
+    }
+    .big-purple-box img{
+        width: 90%;
+    }
+
+    .footer-container{
+        grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    }
+}
